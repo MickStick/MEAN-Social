@@ -38,11 +38,11 @@ var UserSchema = mong.Schema({
 var User = module.exports = mong.model('User', UserSchema);
 
 module.exports.getUserById = function(id, callback) {
-    User.findOne({id : id}, callback);
+    User.findOne({ id: id }, callback);
 }
 
 module.exports.getUserByObjectId = function(id, callback) {
-    User.findById({id : id}, callback);
+    User.findById({ _id: id }, callback);
 }
 
 module.exports.getUserByUname = function(Uname, callback) {

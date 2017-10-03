@@ -90,7 +90,7 @@ router.post('/auth', function(req, res, next) {
                     msg: "User Not Found"
                 });
             } else {
-                console.log("User ID: "+ user.id);
+                console.log("User ID: " + user.id);
                 UserPwd.getPwdById(user.id, function(err, pwd) {
                     if (err) {
                         return res.json({
@@ -116,13 +116,13 @@ router.post('/auth', function(req, res, next) {
                                 } else {
                                     if (isMatch) {
                                         console.log("User Object: " + user);
-                                        const token = jwt.sign({data: user}, require('../model/DBConfig').secret, {
+                                        const token = jwt.sign({ data: user }, require('../model/DBConfig').secret, {
                                             expiresIn: 604800 //expires in a week
                                         });
 
                                         res.json({
                                             success: true,
-                                            token: 'JWT ' + token,
+                                            token: 'Bearer ' + token,
                                             user: user
                                         });
                                     } else {
@@ -143,14 +143,15 @@ router.post('/auth', function(req, res, next) {
 });
 
 //Profile
-router.get('/profile', pp.authenticate('jwt', {session: false}),function(req, res, next) {
-    res.send("User Profile");
+router.get('/profile', pp.authenticate('jwt-bearer', { session: false }), function(req, res, next) {
+    res.json({ user: req.user });
+    //res.send("User Profile");
 });
 
 //Validate
-router.get('/validate', function(req, res, next) {
-    res.json({user:req.user});
-});
+// router.get('/validate', function(req, res, next) {
+
+// });
 
 
 
