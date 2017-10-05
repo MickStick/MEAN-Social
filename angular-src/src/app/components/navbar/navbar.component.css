@@ -59,6 +59,7 @@ a {
     width: 67%;
     height: 100%;
     float: left;
+    display: block;
     /* outline: red solid; */
 }
 
@@ -87,12 +88,28 @@ a {
 
 .My-navbar .nav-container .nav-routes .route-item {
     font-size: 60%;
-    margin-top: 9mm !important;
-    margin-right: 10mm !important;
+    height: 100%;
+    width: 22mm;
+    text-align: center;
+    transition: background-color 250ms;
 }
 
 .My-navbar .nav-container .nav-routes .route-item .route {
     color: inherit !important;
+    position: relative;
+    top: 9mm !important;
+    border-bottom: 1px solid;
+    border-color: transparent;
+    transition: border-color 250ms, opacity 250ms;
+}
+
+.My-navbar .nav-container .nav-routes .route-item .route:hover {
+    border-color: rgba(255, 255, 255, 0.9);
+    opacity: 0.5;
+}
+
+.active {
+    background-color: rgba(80, 80, 80, 0.5) !important;
 }
 
 @media screen and (max-width:1040px) {
@@ -141,8 +158,12 @@ a {
         background: inherit;
         position: absolute;
         top: 100%;
+        /*transition: height 250ms;*/
         overflow: hidden;
         display: none;
+    }
+    .nav-drop {
+        height: 100px;
     }
     .My-navbar .nav-container .nav-routes {
         float: none;

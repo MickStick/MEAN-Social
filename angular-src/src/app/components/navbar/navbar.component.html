@@ -1,20 +1,20 @@
     <nav class="My-navbar">
-      <a class="logo-route"[routerLink] = "['/']"> MEAN Social Auth-APP</a>
+      <a class="logo-route" [routerLink] = "['/']"> MEAN Social Auth-APP</a>
       <div class="nav-container">
         <ul class="nav-routes nav-routes-left">
-          <li class="route-item">
-            <a class="route" [routerLink]="['/']"> Home </a>
+          <li class="route-item" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
+            <a class="route"  [routerLink]="['/']"> Home </a>
           </li>
         </ul>
         <ul class="nav-routes nav-routes-right">
-          <li class="route-item">
+          <li class="route-item" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
             <a class="route" [routerLink]="['/register']"> Register </a>
           </li>
-          <li class="route-item">
+          <li class="route-item" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
             <a class="route" [routerLink]="['/login']"> Login </a>
           </li>
         </ul>
       </div>
       <button class="nav-toggler"><i class="material-icons">arrow_drop_down_circle</i></button>
-      
+
     </nav>

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="author" content="Mikhail Rene Shaw">
   <title>AngularSrc</title>
   <base href="/">
   <!--  <link rel="stylesheet" type="text/css" href="https://bootswatch.com/sandstone/bootstrap.min.css">  -->
@@ -14,13 +15,36 @@
   crossorigin="anonymous"></script>
   <script type="text/javascript">
         $(document).ready(function(){
-          $('.My-navbar .nav-toggler').click(function(){
-            $('.My-navbar .nav-container').animate({height: 'toggle'});
+          $(window).resize(function(){
+            if($('.My-navbar .nav-toggler').css('display') == 'none'){
+              $('.My-navbar .nav-container').css({"display": "block"});
+            }else{
+              $('.My-navbar .nav-container').css({"display": "none"});
+            }
           });
 
-          $('.My-navbar .nav-container .nav-routes .route-item .route').click(function(){
+          $('.My-navbar .nav-toggler').click(function(){
             $('.My-navbar .nav-container').animate({height: 'toggle'});
+            //$('.My-navbar .nav-container').toggleClass('nav-drop');
           });
+
+          /*$('.My-navbar .nav-container .nav-routes .route-item .route').click(function(){
+            if($('.My-navbar .nav-toggler').css('display') != 'none'){
+              $('.My-navbar .nav-container').animate({height: 'toggle'});
+            }
+
+          });*/
+
+          /*if($('.My-navbar .nav-container .nav-routes .route-item .route').attr('href') == window.location.pathname){
+            $('.My-navbar .nav-container .nav-routes .route-item').css({"background":"pink"});
+          }
+          const url = {
+            def: window.location,
+            path: window.location.pathname,
+            href: window.location.href
+          }
+
+          console.log(url);*/
         });
       </script>
 </head>
