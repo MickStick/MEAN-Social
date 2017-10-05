@@ -1,0 +1,176 @@
+* {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.My-navbar {
+    width: 100%;
+    height: 75px;
+    color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(50, 50, 50, 1);
+    font-size: 28px;
+    position: relative;
+    top: 0%;
+    left: 0%;
+    overflow: visible !important;
+    font-family: 'Roboto';
+}
+
+.My-navbar .nav-toggler {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 15%;
+    right: 5mm;
+    background: none;
+    border: none;
+    border-radius: 200px;
+    display: none;
+}
+
+.My-navbar .nav-toggler:focus {
+    outline: none;
+}
+
+.My-navbar .nav-toggler i {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+a {
+    text-decoration: none;
+}
+
+.My-navbar .logo-route {
+    color: inherit;
+    width: 30%;
+    font-size: 100%;
+    font-weight: 600;
+    padding-left: 10mm !important;
+    padding-top: 5mm !important;
+    float: left;
+}
+
+.My-navbar .logo-route:hover {
+    border: none !important;
+    text-decoration: none !important;
+}
+
+.My-navbar .nav-container {
+    width: 67%;
+    height: 100%;
+    float: left;
+    /* outline: red solid; */
+}
+
+.My-navbar .nav-routes-left {
+    float: left;
+}
+
+.My-navbar .nav-routes-left li {
+    float: left;
+}
+
+.My-navbar .nav-routes-right {
+    float: right;
+}
+
+.My-navbar .nav-container .nav-routes-right li {
+    float: right;
+}
+
+.My-navbar .nav-container .nav-routes {
+    list-style-type: none;
+    width: 50%;
+    height: 100%;
+    /* outline: blue solid; */
+}
+
+.My-navbar .nav-container .nav-routes .route-item {
+    font-size: 60%;
+    margin-top: 9mm !important;
+    margin-right: 10mm !important;
+}
+
+.My-navbar .nav-container .nav-routes .route-item .route {
+    color: inherit !important;
+}
+
+@media screen and (max-width:1040px) {
+    .My-navbar .logo-route {
+        font-size: 80%;
+    }
+    .My-navbar .nav-container .nav-routes .route-item {
+        margin-top: 7.5mm !important;
+        font-size: 50%;
+        font-weight: 600;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .My-navbar .logo-route {
+        font-size: 63%;
+        padding-left: 5mm !important;
+        padding-top: 6mm !important;
+    }
+    .My-navbar .nav-container .nav-routes .route-item {
+        margin-top: 6.5mm !important;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    .My-navbar {
+        margin: 0 !important;
+        position: relative;
+    }
+    .My-navbar .nav-toggler {
+        display: block;
+    }
+    .My-navbar .logo-route {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        padding-left: 0 !important;
+        display: block;
+        margin: 0 auto !important;
+    }
+    .My-navbar .nav-container {
+        width: 100%;
+        height: auto;
+        margin: 0 !important;
+        padding: 1mm 0mm !important;
+        background: inherit;
+        position: absolute;
+        top: 100%;
+        overflow: hidden;
+        display: none;
+    }
+    .My-navbar .nav-container .nav-routes {
+        float: none;
+        width: 100%;
+        height: 28px;
+        padding: 0.5mm 0mm !important;
+    }
+    .My-navbar .nav-container .nav-routes .route-item {
+        font-size: 63%;
+        width: 100%;
+        height: 100%;
+        margin: 0 !important;
+        padding: 1mm 0mm !important;
+    }
+    .My-navbar .nav-container .nav-routes .route-item .route {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        display: block;
+        margin: auto !important;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    .My-navbar {
+        height: 65px;
+    }
+    .My-navbar .nav-toggler {
+        right: 2mm;
+    }
+}
