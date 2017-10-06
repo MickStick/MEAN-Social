@@ -14,6 +14,8 @@ import { HomeComponent } from './components/home/home.component';
 
 import { ValidateService} from './services/validate.service';
 
+import * as $ from 'jquery';
+
 const appRoutes: Routes = [
   {
     path: '',

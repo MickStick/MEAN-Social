@@ -13,40 +13,7 @@
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
-  <script type="text/javascript">
-        $(document).ready(function(){
-          $(window).resize(function(){
-            if($('.My-navbar .nav-toggler').css('display') == 'none'){
-              $('.My-navbar .nav-container').css({"display": "block"});
-            }else{
-              $('.My-navbar .nav-container').css({"display": "none"});
-            }
-          });
 
-          $('.My-navbar .nav-toggler').click(function(){
-            $('.My-navbar .nav-container').animate({height: 'toggle'});
-            //$('.My-navbar .nav-container').toggleClass('nav-drop');
-          });
-
-          /*$('.My-navbar .nav-container .nav-routes .route-item .route').click(function(){
-            if($('.My-navbar .nav-toggler').css('display') != 'none'){
-              $('.My-navbar .nav-container').animate({height: 'toggle'});
-            }
-
-          });*/
-
-          /*if($('.My-navbar .nav-container .nav-routes .route-item .route').attr('href') == window.location.pathname){
-            $('.My-navbar .nav-container .nav-routes .route-item').css({"background":"pink"});
-          }
-          const url = {
-            def: window.location,
-            path: window.location.pathname,
-            href: window.location.href
-          }
-
-          console.log(url);*/
-        });
-      </script>
 </head>
 <body>
   <app-root></app-root>

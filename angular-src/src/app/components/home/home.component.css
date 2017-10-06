@@ -165,6 +165,9 @@ html {
 }
 
 @media screen and (max-width: 415px) {
+    .HomeContainer .top-sect {
+        width: 100%;
+    }
     .HomeContainer .third-container .one-third p {
         font-size: 80%;
     }
