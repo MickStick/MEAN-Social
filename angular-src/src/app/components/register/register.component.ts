@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ValidateService} from '../../services/validate.service';
+import { FlashMessagesService} from 'angular2-flash-messages';
 
 @Component({
   selector: 'app-register',
@@ -14,7 +15,7 @@ export class RegisterComponent implements OnInit {
   pword: String;
   rpword: String;
 
-  constructor(private valService: ValidateService) { }
+  constructor(private valService: ValidateService, private FlashMsg: FlashMessagesService) { }
 
 
   ngOnInit() {
@@ -31,33 +32,41 @@ export class RegisterComponent implements OnInit {
    };
 
    if (!this.valService.valRegister(user)) {
-    console.log('All Fields Are Required');
+    this.FlashMsg.show('All Fields Are Required', {cssClass: 'msg-danger msg', timeout: 5000});
+    return false;
    }else {
-     console.log(user);
+     // this.FlashMsg.show(user);
+     return true;
    }
   }
 
 EmailVal() {
     if (!this.valService.regEmailValidate(this.email)) {
-      console.log('Invalid Email');
+      this.FlashMsg.show('Invalid Email', {cssClass: 'msg-danger msg', timeout: 5000});
+      return false;
     }else {
-      console.log('Email Accepted!');
+      this.FlashMsg.show('Email Accepted!', {cssClass: 'msg-accept msg', timeout: 5000});
+      return true;
     }
   }
 
   PasswordVal() {
     if (!this.valService.regPasswordValidate(this.pword)) {
-      console.log('Password Not Strong Enough');
+      this.FlashMsg.show('Password Not Strong Enough', {cssClass: 'msg-danger msg', timeout: 5000});
+      return false;
     }else {
-      console.log('Password Accepted!!');
+      this.FlashMsg.show('Password Accepted!!', {cssClass: 'msg-accept msg', timeout: 5000});
+      return true;
     }
   }
 
   RPasswordVal() {
     if (!this.valService.regRPasswordValidate(this.pword, this.rpword)) {
-      console.log('Passwords Must Match');
+      this.FlashMsg.show('Passwords Must Match', {cssClass: 'msg-danger msg', timeout: 5000});
+      return false;
     }else {
-      console.log('Password Are A Match!!');
+      this.FlashMsg.show('Password Are A Match!!', {cssClass: 'msg-accept msg', timeout: 5000});
+      return true;
     }
   }
 

@@ -50,8 +50,8 @@
     width: 100%;
     text-align: center;
     display: block;
-    margin: 1mm auto !important;
-    font-size: 80%;
+    margin: 0.5mm auto !important;
+    font-size: 70%;
 }
 
 .default-form .data-table tr td input {

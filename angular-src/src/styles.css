@@ -2,3 +2,32 @@
     margin: 0 !important;
     padding: 0!important;
 }
+
+.msg {
+    font-size: 20px;
+    color: rgba(50, 50, 50, 0.9);
+    text-align: center;
+    font-family: 'Roboto';
+}
+
+.msg-danger {
+    width: 40%;
+    height: auto;
+    padding: 0.5mm 0mm !important;
+    display: block;
+    margin: 0.5mm auto 0.5mm auto !important;
+    background-color: rgba(247, 47, 47, 0.2);
+    border: 0.5mm solid rgba(247, 47, 47, 1);
+    border-radius: 2mm;
+}
+
+.msg-accept {
+    width: 70%;
+    height: auto;
+    padding: 0.5mm 0mm !important;
+    display: block;
+    margin: 0.5mm auto 0.5mm auto !important;
+    background-color: rgba(20, 247, 20, 0.2);
+    border: 0.5mm solid rgba(20, 247, 20, 1);
+    border-radius: 2mm;
+}
