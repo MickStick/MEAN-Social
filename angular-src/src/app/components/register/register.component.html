@@ -1,3 +1,17 @@
-<p>
-  register works!
-</p>
+<form class="default-form" (submit)="onRegisterSubmit()">
+  <table class="data-table">
+    <tr><td><label for="fname">First Name</label></td></tr>
+    <tr><td><input type="text" [(ngModel)] = "fname" name="fname" placeholder="John"/></td></tr>
+    <tr><label for="lname" >Last Name</label></tr>
+    <tr><td><input type="text" [(ngModel)] = "lname" name="lname" placeholder="Doe"/></td></tr>
+    <tr><label for="uname">Username</label></tr>
+    <tr><td><input type="text" [(ngModel)] = "uname" name="uname" placeholder="doeboy"/></td></tr>
+    <tr><label for="email">Email Address</label></tr>
+    <tr><td><input type="email" [(ngModel)] = "email" name="email" placeholder="exam@ple.com"/></td></tr>
+    <tr><label for="pword">Password</label></tr>
+    <tr><td><input type="password" [(ngModel)] = "pword" name="pword" placeholder="********"/></td></tr>
+    <tr><label for="rpword">Re-type Password</label></tr>
+    <tr><td><input type="password" [(ngModel)] = "rpword" name="rpword" placeholder="********"/></td></tr>
+  </table>
+  <button type="submit" class="form-btn btn-def">Register</button>
+</form>

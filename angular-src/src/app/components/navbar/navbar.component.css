@@ -116,8 +116,12 @@ a {
     .My-navbar .logo-route {
         font-size: 80%;
     }
+    .My-navbar .nav-container {
+        width: 66%;
+        /*outline: red solid;*/
+    }
     .My-navbar .nav-container .nav-routes .route-item {
-        margin-top: 7.5mm !important;
+        margin-top: 0mm !important;
         font-size: 50%;
         font-weight: 600;
     }
@@ -129,8 +133,12 @@ a {
         padding-left: 5mm !important;
         padding-top: 6mm !important;
     }
+    .My-navbar .nav-container {
+        width: 67.2%;
+        /*outline: red solid;*/
+    }
     .My-navbar .nav-container .nav-routes .route-item {
-        margin-top: 6.5mm !important;
+        margin-top: 0mm !important;
     }
 }
 
@@ -183,7 +191,7 @@ a {
         height: 100%;
         text-align: center;
         display: block;
-        margin: auto !important;
+        top: 1mm !important;
     }
 }
 
