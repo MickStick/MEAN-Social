@@ -58,5 +58,5 @@ typings/
 .env
 
 # Visual Studio Config Folder
-.vscode
+.vscode/
 
