@@ -168,6 +168,12 @@ html {
 @media screen and (max-width: 415px) {
     .HomeContainer .top-sect {
         width: 100%;
+        padding: 2mm 0mm 4mm 0mm !important;
+        margin-bottom: 4mm !important;
+    }
+    .HomeContainer .top-sect>label {
+        margin-top: 4mm !important;
+        width: 80%;
     }
     .HomeContainer .third-container .one-third p {
         font-size: 80%;
@@ -175,5 +181,24 @@ html {
     .HomeContainer .third-container .one-third {
         width: 98%;
         margin: 2mm auto !important;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .HomeContainer .top-sect>h1 {
+        font-size: 36px;
+    }
+    .HomeContainer .top-sect>label {
+        font-size: 21px;
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .HomeContainer .top-sect>h1 {
+        font-size: 32px;
+    }
+    .HomeContainer .top-sect>label {
+        font-size: 20px;
     }
 }
