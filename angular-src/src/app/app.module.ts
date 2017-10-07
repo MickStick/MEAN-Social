@@ -13,6 +13,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
 
 import { ValidateService} from './services/validate.service';
+import { AuthenticationService} from './services/authentication.service';
 
 import { FlashMessagesModule} from 'angular2-flash-messages';
 
@@ -58,7 +59,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     FlashMessagesModule
   ],
-  providers: [ValidateService],
+  providers: [ValidateService, AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
