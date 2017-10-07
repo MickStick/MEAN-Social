@@ -1,0 +1,81 @@
+* {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: 'Roboto';
+}
+
+body {
+    padding-top: 15mm !important;
+}
+
+.default-form {
+    width: 500px;
+    height: auto;
+    display: block;
+    padding: 2mm 0mm !important;
+    margin: auto !important;
+    font-size: 28px;
+    color: rgba(50, 50, 50, 0.9);
+}
+
+.default-form .form-header {
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin: 1mm auto !important;
+    font-size: 100%;
+}
+
+.default-form hr {
+    width: 60%;
+    display: block;
+    margin: auto !important;
+    border: none;
+    border-bottom: 1px solid;
+}
+
+.default-form .data-table {
+    width: 100%;
+    height: auto;
+}
+
+.default-form .data-table tr {
+    width: 100%;
+    height: auto;
+}
+
+.default-form .data-table tr td {
+    width: 100%;
+    height: auto;
+    padding: 2px !important;
+}
+
+.default-form .data-table tr td label {
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin: 0.5mm auto !important;
+    font-size: 70%;
+}
+
+.default-form .data-table tr td input {
+    width: 90%;
+    height: 24px;
+    padding: 2px 4px !important;
+    display: block;
+    margin: auto !important;
+    font-size: 70%;
+}
+
+.default-form .form-btn {
+    float: right;
+    margin: 2mm 7mm 2mm 0mm !important;
+}
+
+.default-form .form-btn:focus {
+    outline: none;
+}
+
+.btn {
+    padding: 1mm 2mm !important;
+}

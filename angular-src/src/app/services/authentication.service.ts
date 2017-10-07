@@ -7,17 +7,38 @@ export class AuthenticationService {
 
   token: any;
   user: any;
-  url: string;
+  Rurl: string;
+  Lurl: string;
 
   constructor(private http: Http) {
-    this.url = 'http://localhost:4444/users/register';
+    this.Rurl = 'http://localhost:4444/users/register';
+    this.Lurl = 'http://localhost:4444/users/auth';
   }
 
   registerUser(user) {
-    let headers = new Headers();
+    const headers = new Headers();
     headers.append('Content-type', 'application/json');
 
-    return this.http.post(this.url, user, {headers : headers}).map(res => res.json());
+    return this.http.post(this.Rurl, user, {headers : headers}).map(res => res.json());
   }
 
+  loginUser(user) {
+    const headers = new Headers();
+    headers.append('Content-type', 'application/json');
+
+    return this.http.post(this.Lurl, user, {headers : headers}).map(res => res.json());
+  }
+
+  storeUserData(data) {
+    localStorage.setItem('id_token', data.token);
+    localStorage.setItem('user', JSON.stringify(data.user));
+    this.token = data.token;
+    this.user = data.user;
+  }
+
+  userLogout() {
+    this.token = null;
+    this.user = null;
+    localStorage.clear();
+ }
 }

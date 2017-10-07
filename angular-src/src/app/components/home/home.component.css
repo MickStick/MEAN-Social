@@ -73,7 +73,8 @@ html {
     outline: none;
 }
 
-.btn-def {
+
+/*.btn-def {
     background-color: rgba(45, 54, 92, 1);
     transition: color 250ms, background-color 250ms;
 }
@@ -99,7 +100,7 @@ html {
 
 .btn-go:active {
     background-color: rgba(66, 209, 111, 0.6);
-}
+}*/
 
 .sect-title {
     text-align: center;

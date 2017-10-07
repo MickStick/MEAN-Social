@@ -87,7 +87,7 @@ router.post('/auth', function(req, res, next) {
             if (!user) {
                 return res.json({
                     success: false,
-                    msg: "User Not Found"
+                    msg: "Username or Password Incorrect"
                 });
             } else {
                 console.log("User ID: " + user.id);

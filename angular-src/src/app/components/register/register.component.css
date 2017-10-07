@@ -64,29 +64,14 @@
 }
 
 .default-form .form-btn {
-    padding: 1mm 2mm !important;
     float: right;
     margin: 2mm 7mm 2mm 0mm !important;
-    font-size: 80%;
-    border: none;
-    border-radius: 2mm;
-    cursor: pointer;
 }
 
 .default-form .form-btn:focus {
     outline: none;
 }
 
-.btn-def {
-    background-color: rgba(40, 87, 126, 1);
-    transition: color 250ms, background-color 250ms;
-}
-
-.btn-def:hover {
-    background-color: rgba(64, 130, 184, 1);
-    color: rgba(240, 240, 240, 0.8);
-}
-
-.btn-def:active {
-    background-color: rgba(64, 130, 184, 0.6);
+.btn {
+    padding: 1mm 2mm !important;
 }

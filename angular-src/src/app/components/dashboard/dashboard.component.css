@@ -1,0 +1,15 @@
+* {
+    padding: 0 !important;
+    margin: 0 !important;
+    font-family: 'Roboto';
+    font-size: 32px;
+}
+
+p {
+    margin-right: 20mm !important;
+}
+
+.btn {
+    padding: 2mm !important;
+    font-size: 28px !important;
+}
