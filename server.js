@@ -27,7 +27,7 @@ mong.connection.on('error', function(err) {
 
 var users = require('./routes/Users');
 
-app.set(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors()); //initialize cors
 app.use(bp.json()); //initialize body-parser
 app.use(pp.initialize()); //Passport Middleware
@@ -35,8 +35,12 @@ app.use(pp.session()); //Passport Middleware
 require('./model/TokenConfig')(pp);
 app.use('/users', users);
 
-app.get('/', function(req, res, next) {
+/*app.get('/', (req, res) => {
     res.send("Ntn nuh deh yah!!!");
+});*/
+
+app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '/public/index.html'));
 });
 
 
