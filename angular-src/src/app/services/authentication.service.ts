@@ -9,10 +9,12 @@ export class AuthenticationService {
   user: any;
   Rurl: string;
   Lurl: string;
+  Purl: string;
 
   constructor(private http: Http) {
     this.Rurl = 'http://localhost:4444/users/register';
     this.Lurl = 'http://localhost:4444/users/auth';
+    this.Purl = 'http://localhost:4444/users/profile';
   }
 
   registerUser(user) {
@@ -25,8 +27,15 @@ export class AuthenticationService {
   loginUser(user) {
     const headers = new Headers();
     headers.append('Content-type', 'application/json');
-
     return this.http.post(this.Lurl, user, {headers : headers}).map(res => res.json());
+  }
+
+  getProfile() {
+    const headers = new Headers();
+    this.loadToken();
+    headers.append('Authorization', this.token);
+    headers.append('Content-type', 'application/json');
+    return this.http.get(this.Purl, {headers : headers}).map(res => res.json());
   }
 
   storeUserData(data) {
@@ -40,5 +49,10 @@ export class AuthenticationService {
     this.token = null;
     this.user = null;
     localStorage.clear();
+ }
+
+ loadToken() {
+   const Gtoken = localStorage.getItem('id_token');
+   this.token = Gtoken;
  }
 }

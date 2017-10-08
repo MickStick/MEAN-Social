@@ -7,12 +7,23 @@
           </li>
         </ul>
         <ul class="nav-routes nav-routes-right">
-          <li class="route-item" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
-            <a class="route" [routerLink]="['/register']"> Register </a>
-          </li>
-          <li class="route-item" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
-            <a class="route" [routerLink]="['/login']"> Login </a>
-          </li>
+          <article>
+            <li class="route-item" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
+              <a class="route" [routerLink]="['/login']"> Login </a>
+            </li>
+            <li class="route-item" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
+              <a class="route" [routerLink]="['/register']"> Register </a>
+            </li>
+            <li class="route-item" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
+              <a class="route" [routerLink]="['/dashboard']"> Dashboard </a>
+            </li>
+            <li class="route-item" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
+              <a class="route" [routerLink]="['/profile']"> Profile </a>
+            </li>
+            <li class="route-item">
+              <a class="route" href="#" (click)="onLogout()"> Logout </a>
+            </li>
+          </article>
         </ul>
       </div>
       <button class="nav-toggler" (click)="navDrop()"><i class="material-icons">arrow_drop_down_circle</i></button>
