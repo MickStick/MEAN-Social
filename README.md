@@ -14,3 +14,5 @@ This is a **Node JS** and **Express** based authentication API with an **Angular
 > cd ../
 
 > npm start
+
+> goto: http://localhost:4444/
