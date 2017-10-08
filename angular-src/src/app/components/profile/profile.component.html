@@ -18,8 +18,8 @@
   </div>
 </div>-->
 
-<div *ngIf="user">
-  <label>{{user.fname + " " + user.lname}}</label>
+<div *ngIf="user" class="dashboard">
+  <label class="page-title">{{user.fname + " " + user.lname}}</label>
   <ul class="list-group">
     <li class="list-group-item">Username: {{user.username}}</li>
     <li class="list-group-item">Email   : {{user.email}}</li>

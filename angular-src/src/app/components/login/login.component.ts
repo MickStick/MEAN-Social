@@ -18,6 +18,11 @@ export class LoginComponent implements OnInit {
   uname: String;
   pword: String;
   ngOnInit() {
+    if (!this.authService.loggedIn()) {
+      return true;
+    }else {
+      this.router.navigate(['/dashboard']);
+    }
   }
 
   onLoginSubmit() {
@@ -28,10 +33,10 @@ export class LoginComponent implements OnInit {
     this.authService.loginUser(user).subscribe(data => {
       if (data.success) {
         this.authService.storeUserData(data);
-        this.FlashMsg.show('Logged In!', {cssClass: 'msg-accept msg', timeout: 5000});
+        this.FlashMsg.show('Logged In!', {cssClass: 'msg-accept msg', timeout: 2000});
         this.router.navigate(['/dashboard']);
       }else {
-        this.FlashMsg.show(data.msg, {cssClass: 'msg-danger msg', timeout: 5000});
+        this.FlashMsg.show(data.msg, {cssClass: 'msg-danger msg', timeout: 2000});
         this.router.navigate(['/login']);
       }
     });

@@ -33,7 +33,7 @@ export class NavbarComponent implements OnInit {
 
   onLogout() {
     this.authService.userLogout();
-    this.FlashMsg.show('User Logged Out!', {cssClass : 'msg msg-caution', timeout: 3000});
+    this.FlashMsg.show('User Logged Out!', {cssClass : 'msg msg-caution', timeout: 2000});
     this.router.navigate(['/login']);
     return false;
  }

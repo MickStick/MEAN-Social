@@ -9,6 +9,7 @@ import { Router} from '@angular/router';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  user: Object;
 
   constructor(
     private authService: AuthenticationService,
@@ -17,6 +18,11 @@ export class DashboardComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    /*this.authService.getUserData().subscribe(User => {
+      this.user = User;
+    });*/
+    this.user = this.authService.getUserData();
+    console.log(this.user);
   }
 
   onLogout() {

@@ -3,8 +3,8 @@
     <h1>MEAN Social Authentication WebApp</h1>
     <label>Welcome to the MEAN Stack Social Media Authentication Web Application made from scrath, nigga!!</label>
     <div class="btn-container">
-      <button class="route-btn btn-def"><a class="btn-route" [routerLink] = "['/register']">Sign Up!</a></button>
-      <button class="route-btn btn-go"><a class="btn-route" [routerLink] = "['/login']">Login</a></button>
+      <button *ngIf="!authService.loggedIn()" class="route-btn btn-def"><a class="btn-route" [routerLink] = "['/register']">Sign Up!</a></button>
+      <button *ngIf="!authService.loggedIn()" class="route-btn btn-go"><a class="btn-route" [routerLink] = "['/login']">Login</a></button>
     </div>
   </div>
 

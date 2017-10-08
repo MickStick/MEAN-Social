@@ -8,19 +8,19 @@
         </ul>
         <ul class="nav-routes nav-routes-right">
           <article>
-            <li class="route-item" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
+            <li *ngIf="!authService.loggedIn()" class="route-item" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
               <a class="route" [routerLink]="['/login']"> Login </a>
             </li>
-            <li class="route-item" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
+            <li *ngIf="!authService.loggedIn()" class="route-item" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
               <a class="route" [routerLink]="['/register']"> Register </a>
             </li>
-            <li class="route-item" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
+            <li *ngIf="authService.loggedIn()" class="route-item" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
               <a class="route" [routerLink]="['/dashboard']"> Dashboard </a>
             </li>
-            <li class="route-item" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
+            <li *ngIf="authService.loggedIn()" class="route-item" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
               <a class="route" [routerLink]="['/profile']"> Profile </a>
             </li>
-            <li class="route-item">
+            <li *ngIf="authService.loggedIn()" class="route-item">
               <a class="route" href="#" (click)="onLogout()"> Logout </a>
             </li>
           </article>

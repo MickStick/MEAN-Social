@@ -5,11 +5,63 @@
     font-size: 32px;
 }
 
-p {
-    margin-right: 20mm !important;
+.dashboard {
+    width: 85%;
+    height: auto;
+    padding: 15mm 5mm !important;
+    margin: 2mm auto 20mm auto !important;
+    position: relative;
 }
 
-.btn {
-    padding: 2mm !important;
-    font-size: 28px !important;
+.dashboard .page-title {
+    font-size: 40px;
+    text-align: center;
+    margin: 1mm 0mm !important;
+}
+
+.dashboard .dash-message {
+    font-size: 20px;
+    display: block;
+    margin: 5mm auto !important;
+    padding-left: 3mm !important;
+}
+
+.dashboard .dash-message i {
+    font-size: 20px;
+}
+
+@media screen and (max-width: 415px) {
+    .dashboard {
+        width: 100%;
+        padding: 2mm 0mm 4mm 0mm !important;
+        margin-bottom: 4mm !important;
+    }
+    .dashboard .dash-meassage {
+        margin-top: 4mm !important;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .dashboard .page-title {
+        font-size: 36px;
+    }
+    .dashboard .dash-meassage {
+        font-size: 17px;
+    }
+    .dashboard .dash-message i {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .dashboard .page-title {
+        font-size: 32px;
+    }
+    .dashboard .dash-meassage {
+        font-size: 15px;
+    }
+    .dashboard .dash-message i {
+        font-size: 15px;
+    }
 }
