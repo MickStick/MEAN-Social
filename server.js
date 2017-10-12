@@ -17,7 +17,7 @@ var app = express();
 mong.connect(DB.url, {
     useMongoClient: true,
 }, function() { //CallBack message on connection
-    console.log("Connected to database: " + DB.url + "...");
+    console.log("Connected to database: " + DB.db + "...");
 });
 
 //Checking for DataBase Errors
@@ -35,9 +35,9 @@ app.use(pp.session()); //Passport Middleware
 require('./model/TokenConfig')(pp);
 app.use('/users', users);
 
-/*app.get('/', (req, res) => {
+app.get('/', (req, res) => {
     res.send("Ntn nuh deh yah!!!");
-});*/
+});
 
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, '/public/index.html'));

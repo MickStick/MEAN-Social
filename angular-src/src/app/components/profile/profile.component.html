@@ -1,27 +1,34 @@
-<!--<div class="Profile-Container">
-  <div class="To-Post-Container">
-    <form method = "POST" action="profile.php" enctype="multipart/form-data">
-        <textarea
-          rows="20" name="post"
-          placeholder="What's going on in your brain right now?"
-        ></textarea>
-        <button name="makePost" type="submit" id="makePost">
-          <i class="material-icons">add</i>
-        </button>
-        <!--<label for="photo_posts"><i class="material-icons">add_a_photo</i></label>
-        <input type="file" id="photo_posts" accept=".png,.jpg," />-->
-    <!--</form
-    <hr>
-  </div>
-  <div class="Post-Container">
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<div *ngIf="user">
+  <!--<div class="dashboard">
+    <label class="page-title">{{user.fname + " " + user.lname}}</label>
+    <ul class="list-group">
+      <li class="list-group-item">Username: {{user.username}}</li>
+      <li class="list-group-item">Email   : {{user.email}}</li>
+    </ul>
+  </div>-->
+  <div class="Profile-Container">
+    <div class="To-Post-Container">
+      <form method = "POST" action="profile.php" enctype="multipart/form-data">
+          <textarea
+            rows="20" name="post"
+            placeholder="What's going on in your brain right now?"
+          ></textarea>
+          <button name="makePost" type="submit" id="makePost">
+            <i class="material-icons">add</i>
+          </button>
+          <!--<label for="photo_posts"><i class="material-icons">add_a_photo</i></label>
+          <input type="file" id="photo_posts" accept=".png,.jpg," />-->
+      </form>
+      <hr>
+    </div>
+    <div class="Post-Container">
 
+    </div>
   </div>
-</div>-->
-
-<div *ngIf="user" class="dashboard">
-  <label class="page-title">{{user.fname + " " + user.lname}}</label>
-  <ul class="list-group">
-    <li class="list-group-item">Username: {{user.username}}</li>
-    <li class="list-group-item">Email   : {{user.email}}</li>
-  </ul>
 </div>
+
+
+<!---->

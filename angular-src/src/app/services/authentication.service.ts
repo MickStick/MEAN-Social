@@ -13,9 +13,9 @@ export class AuthenticationService {
   Purl: string;
 
   constructor(private http: Http) {
-    this.Rurl = 'http://localhost:4444/users/register';
-    this.Lurl = 'http://localhost:4444/users/auth';
-    this.Purl = 'http://localhost:4444/users/profile';
+    this.Rurl = 'http://mik:4444/users/register';
+    this.Lurl = 'http://mik:4444/users/auth';
+    this.Purl = 'http://mik:4444/users/profile';
   }
 
   registerUser(user) {

@@ -22,6 +22,9 @@ export class NavbarComponent implements OnInit {
           $('.My-navbar .nav-container').css({'display': 'block'});
         }else {
           $('.My-navbar .nav-container').css({'display': 'none'});
+          $('.route-item').click(function(){
+            $('.My-navbar .nav-container').animate({height: 'toggle'});
+          });
         }
       });
     });

@@ -2,22 +2,22 @@
       <a class="logo-route" [routerLink] = "['/']"> MEAN Social Auth-APP</a>
       <div class="nav-container">
         <ul class="nav-routes nav-routes-left">
-          <li class="route-item" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
+          <li class="route-item" [routerLinkActive]="['active']"  [routerLinkActiveOptions] = "{exact:true}">
             <a class="route"  [routerLink]="['/']"> Home </a>
           </li>
         </ul>
         <ul class="nav-routes nav-routes-right">
           <article>
-            <li *ngIf="!authService.loggedIn()" class="route-item" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
+            <li *ngIf="!authService.loggedIn()" class="route-item"  [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
               <a class="route" [routerLink]="['/login']"> Login </a>
             </li>
-            <li *ngIf="!authService.loggedIn()" class="route-item" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
+            <li *ngIf="!authService.loggedIn()" class="route-item"  [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
               <a class="route" [routerLink]="['/register']"> Register </a>
             </li>
             <li *ngIf="authService.loggedIn()" class="route-item" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
               <a class="route" [routerLink]="['/dashboard']"> Dashboard </a>
             </li>
-            <li *ngIf="authService.loggedIn()" class="route-item" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
+            <li *ngIf="authService.loggedIn()" class="route-item"  [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
               <a class="route" [routerLink]="['/profile']"> Profile </a>
             </li>
             <li *ngIf="authService.loggedIn()" class="route-item">

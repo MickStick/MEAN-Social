@@ -278,7 +278,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"HomeContainer\">\n  <div class=\"top-sect\">\n    <h1>MEAN Social Authentication WebApp</h1>\n    <label>Welcome to the MEAN Stack Social Media Authentication Web Application made from scrath, nigga!!</label>\n    <div class=\"btn-container\">\n      <button *ngIf=\"!authService.loggedIn()\" class=\"route-btn btn-def\"><a class=\"btn-route\" [routerLink] = \"['/register']\">Sign Up!</a></button>\n      <button *ngIf=\"!authService.loggedIn()\" class=\"route-btn btn-go\"><a class=\"btn-route\" [routerLink] = \"['/login']\">Login</a></button>\n    </div>\n  </div>\n\n  <div class=\"third-container\">\n    <div class=\"third-wrap\">\n        <div class=\"one-third\">\n          <h4 class=\"sect-title one-third-title\">Express Backend<hr/></h4>\n          <p>A rock solid NodeJS/Express server using Mongoose to organize the models and query the database.</p>\n        </div>\n        <div class=\"one-third\">\n          <h4 class=\"sect-title one-third-title\"> Angular-CLI <hr/></h4>\n          <p>Angular-CLI to generate companents, services and more, Local dev server and easy compilation. </p>\n        </div>\n        <div class=\"one-third\">\n          <h4 class=\"sect-title one-third-title\"> JWT Token <hr/></h4>\n          <p>Full featured authentication using JSON Web Tokens. Login and store user data</p>\n        </div>\n      </div>\n    </div>\n\n</div>\n"
+module.exports = "<div class=\"HomeContainer\">\n  <div class=\"top-sect\">\n    <h1>MEAN Social Authentication WebApp</h1>\n    <label>Welcome to the MEAN Stack Social Media Authentication Web Application made from scratch, nigga!!</label>\n    <div class=\"btn-container\">\n      <button *ngIf=\"!authService.loggedIn()\" class=\"route-btn btn-def\"><a class=\"btn-route\" [routerLink] = \"['/register']\">Sign Up!</a></button>\n      <button *ngIf=\"!authService.loggedIn()\" class=\"route-btn btn-go\"><a class=\"btn-route\" [routerLink] = \"['/login']\">Login</a></button>\n    </div>\n  </div>\n\n  <div class=\"third-container\">\n    <div class=\"third-wrap\">\n        <div class=\"one-third\">\n          <h4 class=\"sect-title one-third-title\">Express Backend<hr/></h4>\n          <p>A rock solid NodeJS/Express server using Mongoose to organize the models and query the database.</p>\n        </div>\n        <div class=\"one-third\">\n          <h4 class=\"sect-title one-third-title\"> Angular-CLI <hr/></h4>\n          <p>Angular-CLI to generate companents, services and more, Local dev server and easy compilation. </p>\n        </div>\n        <div class=\"one-third\">\n          <h4 class=\"sect-title one-third-title\"> JWT Token <hr/></h4>\n          <p>Full featured authentication using JSON Web Tokens. Login and store user data</p>\n        </div>\n      </div>\n    </div>\n\n</div>\n"
 
 /***/ }),
 
@@ -439,7 +439,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/navbar/navbar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "    <nav class=\"My-navbar\">\n      <a class=\"logo-route\" [routerLink] = \"['/']\"> MEAN Social Auth-APP</a>\n      <div class=\"nav-container\">\n        <ul class=\"nav-routes nav-routes-left\">\n          <li class=\"route-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\">\n            <a class=\"route\"  [routerLink]=\"['/']\"> Home </a>\n          </li>\n        </ul>\n        <ul class=\"nav-routes nav-routes-right\">\n          <article>\n            <li *ngIf=\"!authService.loggedIn()\" class=\"route-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\">\n              <a class=\"route\" [routerLink]=\"['/login']\"> Login </a>\n            </li>\n            <li *ngIf=\"!authService.loggedIn()\" class=\"route-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\">\n              <a class=\"route\" [routerLink]=\"['/register']\"> Register </a>\n            </li>\n            <li *ngIf=\"authService.loggedIn()\" class=\"route-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\">\n              <a class=\"route\" [routerLink]=\"['/dashboard']\"> Dashboard </a>\n            </li>\n            <li *ngIf=\"authService.loggedIn()\" class=\"route-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\">\n              <a class=\"route\" [routerLink]=\"['/profile']\"> Profile </a>\n            </li>\n            <li *ngIf=\"authService.loggedIn()\" class=\"route-item\">\n              <a class=\"route\" href=\"#\" (click)=\"onLogout()\"> Logout </a>\n            </li>\n          </article>\n        </ul>\n      </div>\n      <button class=\"nav-toggler\" (click)=\"navDrop()\"><i class=\"material-icons\">arrow_drop_down_circle</i></button>\n\n    </nav>\n"
+module.exports = "    <nav class=\"My-navbar\">\n      <a class=\"logo-route\" [routerLink] = \"['/']\"> MEAN Social Auth-APP</a>\n      <div class=\"nav-container\">\n        <ul class=\"nav-routes nav-routes-left\">\n          <li class=\"route-item\" [routerLinkActive]=\"['active']\"  [routerLinkActiveOptions] = \"{exact:true}\">\n            <a class=\"route\"  [routerLink]=\"['/']\"> Home </a>\n          </li>\n        </ul>\n        <ul class=\"nav-routes nav-routes-right\">\n          <article>\n            <li *ngIf=\"!authService.loggedIn()\" class=\"route-item\"  [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\">\n              <a class=\"route\" [routerLink]=\"['/login']\"> Login </a>\n            </li>\n            <li *ngIf=\"!authService.loggedIn()\" class=\"route-item\"  [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\">\n              <a class=\"route\" [routerLink]=\"['/register']\"> Register </a>\n            </li>\n            <li *ngIf=\"authService.loggedIn()\" class=\"route-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\">\n              <a class=\"route\" [routerLink]=\"['/dashboard']\"> Dashboard </a>\n            </li>\n            <li *ngIf=\"authService.loggedIn()\" class=\"route-item\"  [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\">\n              <a class=\"route\" [routerLink]=\"['/profile']\"> Profile </a>\n            </li>\n            <li *ngIf=\"authService.loggedIn()\" class=\"route-item\">\n              <a class=\"route\" href=\"#\" (click)=\"onLogout()\"> Logout </a>\n            </li>\n          </article>\n        </ul>\n      </div>\n      <button class=\"nav-toggler\" (click)=\"navDrop()\"><i class=\"material-icons\">arrow_drop_down_circle</i></button>\n\n    </nav>\n"
 
 /***/ }),
 
@@ -479,6 +479,9 @@ var NavbarComponent = (function () {
                 }
                 else {
                     $('.My-navbar .nav-container').css({ 'display': 'none' });
+                    $('.route-item').click(function () {
+                        $('.My-navbar .nav-container').animate({ height: 'toggle' });
+                    });
                 }
             });
         });
@@ -518,7 +521,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "* {\r\n    margin: 0 !important;\r\n    padding: 0 !important;\r\n}\r\n\r\n* {\r\n    padding: 0 !important;\r\n    margin: 0 !important;\r\n    font-family: 'Roboto';\r\n    font-size: 32px;\r\n}\r\n\r\n.dashboard {\r\n    width: 85%;\r\n    height: auto;\r\n    padding: 15mm 5mm !important;\r\n    margin: 2mm auto 20mm auto !important;\r\n    position: relative;\r\n}\r\n\r\n.dashboard .page-title {\r\n    font-size: 40px;\r\n    text-align: center;\r\n    margin: 1mm 0mm !important;\r\n}\r\n\r\n.dashboard .dash-message {\r\n    font-size: 20px;\r\n    display: block;\r\n    margin: 5mm auto !important;\r\n    padding-left: 3mm !important;\r\n}\r\n\r\n.dashboard .dash-message i {\r\n    font-size: 20px;\r\n}\r\n\r\n.dashboard .list-group {\r\n    width: 100%;\r\n    list-style-type: none;\r\n    padding: 0mm 3mm !important;\r\n    margin-top: 10mm !important;\r\n}\r\n\r\n.dashboard .list-group .list-group-item {\r\n    width: 100%;\r\n    margin-bottom: 2mm !important;\r\n    border-bottom: 1px solid;\r\n    color: rgba(50, 50, 50, 0.9);\r\n    font-size: 20px;\r\n    border-color: rgba(50, 50, 50, 0.9);\r\n}\r\n\r\n@media screen and (max-width: 415px) {\r\n    .dashboard {\r\n        width: 100%;\r\n        padding: 2mm 0mm 4mm 0mm !important;\r\n        margin-bottom: 4mm !important;\r\n    }\r\n    .dashboard .list-group {\r\n        padding: 0 !important;\r\n        width: 95%;\r\n    }\r\n}\r\n\r\n@media screen and (max-width: 380px) {\r\n    .dashboard .page-title {\r\n        font-size: 36px;\r\n    }\r\n    .dashboard .list-group .list-group-item {\r\n        font-size: 17px;\r\n    }\r\n}\r\n\r\n@media screen and (max-width: 330px) {\r\n    .dashboard .page-title {\r\n        font-size: 32px;\r\n    }\r\n    .dashboard .list-group .list-group-item {\r\n        font-size: 15px;\r\n    }\r\n}", ""]);
+exports.push([module.i, "* {\r\n    margin: 0 !important;\r\n    padding: 0 !important;\r\n}\r\n\r\n* {\r\n    padding: 0 !important;\r\n    margin: 0 !important;\r\n    font-family: 'Roboto';\r\n    font-size: 32px;\r\n}\r\n\r\n.dashboard {\r\n    width: 85%;\r\n    height: auto;\r\n    padding: 15mm 5mm 5mm 5mm !important;\r\n    margin: 2mm auto 20mm auto !important;\r\n    position: relative;\r\n}\r\n\r\n.dashboard .page-title {\r\n    font-size: 40px;\r\n    text-align: center;\r\n    margin: 1mm 0mm !important;\r\n}\r\n\r\n.dashboard .dash-message {\r\n    font-size: 20px;\r\n    display: block;\r\n    margin: 5mm auto !important;\r\n    padding-left: 3mm !important;\r\n}\r\n\r\n.dashboard .dash-message i {\r\n    font-size: 20px;\r\n}\r\n\r\n.dashboard .list-group {\r\n    width: 100%;\r\n    list-style-type: none;\r\n    padding: 0mm 3mm !important;\r\n    margin-top: 10mm !important;\r\n}\r\n\r\n.Profile-Container {\r\n    width: 600px;\r\n    display: block;\r\n    margin: 2mm auto !important;\r\n}\r\n\r\n.Profile-Container .To-Post-Container {\r\n    width: 100%;\r\n    height: auto;\r\n    display: block;\r\n    padding: 2mm 0mm !important;\r\n}\r\n\r\n.Profile-Container .To-Post-Container form {\r\n    width: 100%;\r\n    height: auto;\r\n}\r\n\r\n.Profile-Container .To-Post-Container form textarea {\r\n    width: 95%;\r\n    height: 70px;\r\n    display: block;\r\n    margin: auto !important;\r\n    padding: 2px 6px 0px 6px !important;\r\n    line-height: 22px;\r\n    font-weight: 600;\r\n    font-size: 18px;\r\n    border: 0px 1px 1px 1px solid rgba(0, 0, 0, 0.1);\r\n    border-radius: 5px 5px 0px 0px;\r\n    resize: none;\r\n}\r\n\r\n.Profile-Container .To-Post-Container form textarea::-webkit-scrollbar {\r\n    background-color: transparent;\r\n    /*rgba(200, 200, 200, 0.2);*/\r\n    width: 10px;\r\n}\r\n\r\n.Profile-Container .To-Post-Container form textarea::-webkit-scrollbar-button {\r\n    /*background-color: rgba(220, 220, 220, 1);\r\n    color: rgba(255, 255, 255, 1);\r\n    height: 12px;\r\n    border-radius: 10px 10px 0px 0px;*/\r\n    display: none;\r\n}\r\n\r\n.Profile-Container .To-Post-Container form textarea::-webkit-scrollbar-thumb {\r\n    border-radius: 5px;\r\n    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);\r\n    background-color: rgba(250, 250, 250, 1);\r\n}\r\n\r\n.Profile-Container .To-Post-Container form textarea::-webkit-scrollbar-track {\r\n    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);\r\n    border-radius: 5px;\r\n}\r\n\r\n.Profile-Container .To-Post-Container form textarea:focus {\r\n    outline: none;\r\n}\r\n\r\n.Profile-Container .To-Post-Container form button {\r\n    /* position: relative; */\r\n    float: right;\r\n    margin-top: 7px !important;\r\n    margin-right: 7px !important;\r\n    width: 25px;\r\n    height: 25px;\r\n    font-weight: 600;\r\n    font-size: 20px;\r\n    background-color: rgba(0, 0, 0, 0.1);\r\n    color: rgba(255, 255, 255, 1);\r\n    border: none;\r\n    border-radius: 100px;\r\n    cursor: pointer;\r\n    transition: background-color 300ms, color 300ms;\r\n}\r\n\r\n\r\n/*.ToPost-Container button i {\r\n    color: rgba(255, 255, 255)\r\n}*/\r\n\r\n.Profile-Container .To-Post-Container form button:hover {\r\n    background-color: transparent;\r\n    color: rgba(0, 0, 0, 0.3);\r\n}\r\n\r\n.Profile-Container .To-Post-Container form button:focus {\r\n    outline: none;\r\n}\r\n\r\n.Profile-Container .To-Post-Container hr {\r\n    width: 99%;\r\n    margin: 10mm auto 5mm auto !important;\r\n    border: none;\r\n    border-bottom: 1px solid rgba(0, 0, 0, 0.1);\r\n}\r\n\r\n.dashboard .list-group .list-group-item {\r\n    width: 100%;\r\n    margin-bottom: 2mm !important;\r\n    border-bottom: 1px solid;\r\n    color: rgba(50, 50, 50, 0.9);\r\n    font-size: 20px;\r\n    border-color: rgba(50, 50, 50, 0.9);\r\n}\r\n\r\n@media screen and (max-width: 600px) {\r\n    .Profile-Container {\r\n        width: 100%;\r\n    }\r\n\r\n    .Profile-Container .To-Post-Container form textarea {\r\n        width: 93%;\r\n        line-height: 20px;\r\n        font-size: 16px;\r\n    }\r\n}\r\n\r\n@media screen and (max-width: 415px) {\r\n    .dashboard {\r\n        width: 100%;\r\n        padding: 2mm 0mm 4mm 0mm !important;\r\n        margin-bottom: 4mm !important;\r\n    }\r\n    .dashboard .list-group {\r\n        padding: 0 !important;\r\n        width: 95%;\r\n    }\r\n}\r\n\r\n@media screen and (max-width: 380px) {\r\n    .dashboard .page-title {\r\n        font-size: 36px;\r\n    }\r\n    .dashboard .list-group .list-group-item {\r\n        font-size: 17px;\r\n    }\r\n}\r\n\r\n@media screen and (max-width: 330px) {\r\n    .dashboard .page-title {\r\n        font-size: 32px;\r\n    }\r\n    .dashboard .list-group .list-group-item {\r\n        font-size: 15px;\r\n    }\r\n}", ""]);
 
 // exports
 
@@ -531,7 +534,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/profile/profile.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--<div class=\"Profile-Container\">\n  <div class=\"To-Post-Container\">\n    <form method = \"POST\" action=\"profile.php\" enctype=\"multipart/form-data\">\n        <textarea\n          rows=\"20\" name=\"post\"\n          placeholder=\"What's going on in your brain right now?\"\n        ></textarea>\n        <button name=\"makePost\" type=\"submit\" id=\"makePost\">\n          <i class=\"material-icons\">add</i>\n        </button>\n        <!--<label for=\"photo_posts\"><i class=\"material-icons\">add_a_photo</i></label>\n        <input type=\"file\" id=\"photo_posts\" accept=\".png,.jpg,\" />-->\n    <!--</form\n    <hr>\n  </div>\n  <div class=\"Post-Container\">\n\n  </div>\n</div>-->\n\n<div *ngIf=\"user\" class=\"dashboard\">\n  <label class=\"page-title\">{{user.fname + \" \" + user.lname}}</label>\n  <ul class=\"list-group\">\n    <li class=\"list-group-item\">Username: {{user.username}}</li>\n    <li class=\"list-group-item\">Email   : {{user.email}}</li>\n  </ul>\n</div>\n"
+module.exports = "<head>\n  <link href=\"https://fonts.googleapis.com/icon?family=Material+Icons\" rel=\"stylesheet\">\n</head>\n<div *ngIf=\"user\">\n  <!--<div class=\"dashboard\">\n    <label class=\"page-title\">{{user.fname + \" \" + user.lname}}</label>\n    <ul class=\"list-group\">\n      <li class=\"list-group-item\">Username: {{user.username}}</li>\n      <li class=\"list-group-item\">Email   : {{user.email}}</li>\n    </ul>\n  </div>-->\n  <div class=\"Profile-Container\">\n    <div class=\"To-Post-Container\">\n      <form method = \"POST\" action=\"profile.php\" enctype=\"multipart/form-data\">\n          <textarea\n            rows=\"20\" name=\"post\"\n            placeholder=\"What's going on in your brain right now?\"\n          ></textarea>\n          <button name=\"makePost\" type=\"submit\" id=\"makePost\">\n            <i class=\"material-icons\">add</i>\n          </button>\n          <!--<label for=\"photo_posts\"><i class=\"material-icons\">add_a_photo</i></label>\n          <input type=\"file\" id=\"photo_posts\" accept=\".png,.jpg,\" />-->\n      </form>\n      <hr>\n    </div>\n    <div class=\"Post-Container\">\n\n    </div>\n  </div>\n</div>\n\n\n<!---->\n"
 
 /***/ }),
 
@@ -542,7 +545,9 @@ module.exports = "<!--<div class=\"Profile-Container\">\n  <div class=\"To-Post-
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfileComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_authentication_service__ = __webpack_require__("../../../../../src/app/services/authentication.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -555,15 +560,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var ProfileComponent = (function () {
-    function ProfileComponent(authService, router) {
+    function ProfileComponent(authService, FlashMsg, router) {
         this.authService = authService;
+        this.FlashMsg = FlashMsg;
         this.router = router;
     }
     ProfileComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.authService.getProfile().subscribe(function (profile) {
             _this.user = profile.user;
+            _this.posts = profile.user.posts;
+            if (_this.posts != 0) {
+            }
+            else {
+                _this.FlashMsg.show('No Posts', { cssClass: 'msg-caution msg', timeout: 1500 });
+            }
         }, function (err) {
             console.log(err);
             return false;
@@ -577,10 +590,10 @@ ProfileComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/components/profile/profile.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/profile/profile.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_authentication_service__["a" /* AuthenticationService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_authentication_service__["a" /* AuthenticationService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_authentication_service__["a" /* AuthenticationService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_authentication_service__["a" /* AuthenticationService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */]) === "function" && _c || Object])
 ], ProfileComponent);
 
-var _a, _b;
+var _a, _b, _c;
 //# sourceMappingURL=profile.component.js.map
 
 /***/ }),
@@ -802,9 +815,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var AuthenticationService = (function () {
     function AuthenticationService(http) {
         this.http = http;
-        this.Rurl = 'http://localhost:4444/users/register';
-        this.Lurl = 'http://localhost:4444/users/auth';
-        this.Purl = 'http://localhost:4444/users/profile';
+        this.Rurl = 'http://mik:4444/users/register';
+        this.Lurl = 'http://mik:4444/users/auth';
+        this.Purl = 'http://mik:4444/users/profile';
     }
     AuthenticationService.prototype.registerUser = function (user) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();

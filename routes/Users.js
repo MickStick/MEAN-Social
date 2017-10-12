@@ -105,7 +105,8 @@ router.post('/auth', function(req, res, next) {
                                 msg: "Username or Password Incorrect"
                             });
                         } else {
-                            console.log("Password typed: " + pword);
+                            console.log("Password typed: " + hex(pword));
+                            console.log("Password in DB: " + pwd.password)
                             UserPwd.compPwd(pword, pwd.password, function(err, isMatch) {
                                 if (err) {
                                     return res.json({
