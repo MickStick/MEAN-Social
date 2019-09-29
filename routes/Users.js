@@ -23,12 +23,14 @@ router.get('/', function(req, res, next) {
 
 //Registration
 router.post('/register', function(req, res, next) {
+    //console.log('Here To Register')
     var count;
     User.count({}, function(err, result) {
         if (err) {
             console.log(err);
         }
         count = result;
+        //console.log(`This is count: ${count}`)
         let newUser = new User({
             id: 100000 + count,
             username: req.body.uname,
@@ -49,7 +51,7 @@ router.post('/register', function(req, res, next) {
             if (err) {
                 res.json({ success: false, msg: "User Failed To Register", id: newUser.id });
                 console.log(err);
-                console.log("ID: " + newUser.id + "\nFisrt Name: " + newUser.fname + "\n User Count: " + count);
+                //console.log("ID: " + newUser.id + "\nFisrt Name: " + newUser.fname + "\n User Count: " + count);
             } else {
                 UserPwd.addPwd(newPwd, function(err, pwd) {
                     if (err) {

@@ -815,9 +815,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var AuthenticationService = (function () {
     function AuthenticationService(http) {
         this.http = http;
-        this.Rurl = 'http://mik:4444/users/register';
-        this.Lurl = 'http://mik:4444/users/auth';
-        this.Purl = 'http://mik:4444/users/profile';
+        this.Rurl = 'http://localhost:4444/users/register';
+        this.Lurl = 'http://localhost:4444/users/auth';
+        this.Purl = 'http://localhost:4444/users/profile';
     }
     AuthenticationService.prototype.registerUser = function (user) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
