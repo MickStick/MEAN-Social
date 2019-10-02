@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
     if (!this.authService.loggedIn()) {
       return true;
     }else {
-      this.router.navigate(['/dashboard']);
+      this.router.navigate(['/timeline']);
     }
   }
 
@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
       if (data.success) {
         this.authService.storeUserData(data);
         this.FlashMsg.show('Logged In!', {cssClass: 'msg-accept msg', timeout: 2000});
-        this.router.navigate(['/dashboard']);
+        this.router.navigate(['/timeline']);
       }else {
         this.FlashMsg.show(data.msg, {cssClass: 'msg-danger msg', timeout: 2000});
         this.router.navigate(['/login']);

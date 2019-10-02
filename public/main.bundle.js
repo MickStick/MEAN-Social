@@ -85,7 +85,7 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_navbar_navbar_component__ = __webpack_require__("../../../../../src/app/components/navbar/navbar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/components/dashboard/dashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_timeline_timeline_component__ = __webpack_require__("../../../../../src/app/components/timeline/timeline.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_profile_profile_component__ = __webpack_require__("../../../../../src/app/components/profile/profile.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_login_login_component__ = __webpack_require__("../../../../../src/app/components/login/login.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_register_register_component__ = __webpack_require__("../../../../../src/app/components/register/register.component.ts");
@@ -135,8 +135,8 @@ var appRoutes = [
         component: __WEBPACK_IMPORTED_MODULE_8__components_profile_profile_component__["a" /* ProfileComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_14__services_auth_guard_service__["a" /* AuthGuardService */]]
     },
     {
-        path: 'dashboard',
-        component: __WEBPACK_IMPORTED_MODULE_7__components_dashboard_dashboard_component__["a" /* DashboardComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_14__services_auth_guard_service__["a" /* AuthGuardService */]]
+        path: 'timeline',
+        component: __WEBPACK_IMPORTED_MODULE_7__components_timeline_timeline_component__["a" /* TimelineComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_14__services_auth_guard_service__["a" /* AuthGuardService */]]
     }
 ];
 var AppModule = (function () {
@@ -149,7 +149,7 @@ AppModule = __decorate([
         declarations: [
             __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */],
             __WEBPACK_IMPORTED_MODULE_6__components_navbar_navbar_component__["a" /* NavbarComponent */],
-            __WEBPACK_IMPORTED_MODULE_7__components_dashboard_dashboard_component__["a" /* DashboardComponent */],
+            __WEBPACK_IMPORTED_MODULE_7__components_timeline_timeline_component__["a" /* TimelineComponent */],
             __WEBPACK_IMPORTED_MODULE_8__components_profile_profile_component__["a" /* ProfileComponent */],
             __WEBPACK_IMPORTED_MODULE_9__components_login_login_component__["a" /* LoginComponent */],
             __WEBPACK_IMPORTED_MODULE_10__components_register_register_component__["a" /* RegisterComponent */],
@@ -175,7 +175,7 @@ AppModule = __decorate([
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/dashboard/dashboard.component.css":
+/***/ "../../../../../src/app/components/timeline/timeline.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -183,7 +183,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "* {\r\n    padding: 0 !important;\r\n    margin: 0 !important;\r\n    font-family: 'Roboto';\r\n    font-size: 32px;\r\n}\r\n\r\n.dashboard {\r\n    width: 85%;\r\n    height: auto;\r\n    padding: 15mm 5mm !important;\r\n    margin: 2mm auto 20mm auto !important;\r\n    position: relative;\r\n}\r\n\r\n.dashboard .page-title {\r\n    font-size: 40px;\r\n    text-align: center;\r\n    margin: 1mm 0mm !important;\r\n}\r\n\r\n.dashboard .dash-message {\r\n    font-size: 20px;\r\n    display: block;\r\n    margin: 5mm auto !important;\r\n    padding-left: 3mm !important;\r\n}\r\n\r\n.dashboard .dash-message i {\r\n    font-size: 20px;\r\n}\r\n\r\n@media screen and (max-width: 415px) {\r\n    .dashboard {\r\n        width: 100%;\r\n        padding: 2mm 0mm 4mm 0mm !important;\r\n        margin-bottom: 4mm !important;\r\n    }\r\n    .dashboard .dash-meassage {\r\n        margin-top: 4mm !important;\r\n        width: 80%;\r\n    }\r\n}\r\n\r\n@media screen and (max-width: 380px) {\r\n    .dashboard .page-title {\r\n        font-size: 36px;\r\n    }\r\n    .dashboard .dash-meassage {\r\n        font-size: 17px;\r\n    }\r\n    .dashboard .dash-message i {\r\n        font-size: 17px;\r\n    }\r\n}\r\n\r\n@media screen and (max-width: 330px) {\r\n    .dashboard .page-title {\r\n        font-size: 32px;\r\n    }\r\n    .dashboard .dash-meassage {\r\n        font-size: 15px;\r\n    }\r\n    .dashboard .dash-message i {\r\n        font-size: 15px;\r\n    }\r\n}", ""]);
+exports.push([module.i, "* {\r\n    padding: 0 !important;\r\n    margin: 0 !important;\r\n    font-family: 'Roboto';\r\n    font-size: 32px;\r\n}\r\n\r\n.timeline {\r\n    width: 85%;\r\n    height: auto;\r\n    padding: 15mm 5mm !important;\r\n    margin: 2mm auto 20mm auto !important;\r\n    position: relative;\r\n}\r\n\r\n.timeline .page-title {\r\n    font-size: 40px;\r\n    text-align: center;\r\n    margin: 1mm 0mm !important;\r\n}\r\n\r\n.timeline .dash-message {\r\n    font-size: 20px;\r\n    display: block;\r\n    margin: 5mm auto !important;\r\n    padding-left: 3mm !important;\r\n}\r\n\r\n.timeline .dash-message i {\r\n    font-size: 20px;\r\n}\r\n\r\n@media screen and (max-width: 415px) {\r\n    .timeline {\r\n        width: 100%;\r\n        padding: 2mm 0mm 4mm 0mm !important;\r\n        margin-bottom: 4mm !important;\r\n    }\r\n    .timeline .dash-meassage {\r\n        margin-top: 4mm !important;\r\n        width: 80%;\r\n    }\r\n}\r\n\r\n@media screen and (max-width: 380px) {\r\n    .timeline .page-title {\r\n        font-size: 36px;\r\n    }\r\n    .timeline .dash-meassage {\r\n        font-size: 17px;\r\n    }\r\n    .timeline .dash-message i {\r\n        font-size: 17px;\r\n    }\r\n}\r\n\r\n@media screen and (max-width: 330px) {\r\n    .timeline .page-title {\r\n        font-size: 32px;\r\n    }\r\n    .timeline .dash-meassage {\r\n        font-size: 15px;\r\n    }\r\n    .timeline .dash-message i {\r\n        font-size: 15px;\r\n    }\r\n}", ""]);
 
 // exports
 
@@ -193,18 +193,18 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/dashboard/dashboard.component.html":
+/***/ "../../../../../src/app/components/timeline/timeline.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"user\" class=\"dashboard\">\n  <label class=\"page-title\">Dashboard</label>\n  <p class=\"dash-message\">Welcome to your \"<i>Dashboard</i>\" {{user.fname}}.</p>\n</div>\n"
+module.exports = "<div *ngIf=\"user\" class=\"timeline\">\n  <label class=\"page-title\">Timeline</label>\n  <p class=\"dash-message\">Welcome to your \"<i>Timeline</i>\" {{user.fname}}.</p>\n</div>\n"
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/dashboard/dashboard.component.ts":
+/***/ "../../../../../src/app/components/timeline/timeline.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DashboardComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TimelineComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_authentication_service__ = __webpack_require__("../../../../../src/app/services/authentication.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
@@ -223,37 +223,37 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var DashboardComponent = (function () {
-    function DashboardComponent(authService, FlashMsg, router) {
+var TimelineComponent = (function () {
+    function TimelineComponent(authService, FlashMsg, router) {
         this.authService = authService;
         this.FlashMsg = FlashMsg;
         this.router = router;
     }
-    DashboardComponent.prototype.ngOnInit = function () {
+    TimelineComponent.prototype.ngOnInit = function () {
         /*this.authService.getUserData().subscribe(User => {
           this.user = User;
         });*/
         this.user = this.authService.getUserData();
         console.log(this.user);
     };
-    DashboardComponent.prototype.onLogout = function () {
+    TimelineComponent.prototype.onLogout = function () {
         this.authService.userLogout();
         this.FlashMsg.show('User Logged Out!', { cssClass: 'msg msg-caution', timeout: 3000 });
         this.router.navigate(['/login']);
     };
-    return DashboardComponent;
+    return TimelineComponent;
 }());
-DashboardComponent = __decorate([
+TimelineComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-dashboard',
-        template: __webpack_require__("../../../../../src/app/components/dashboard/dashboard.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/components/dashboard/dashboard.component.css")]
+        selector: 'app-timeline',
+        template: __webpack_require__("../../../../../src/app/components/timeline/timeline.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/timeline/timeline.component.css")]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_authentication_service__["a" /* AuthenticationService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_authentication_service__["a" /* AuthenticationService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */]) === "function" && _c || Object])
-], DashboardComponent);
+], TimelineComponent);
 
 var _a, _b, _c;
-//# sourceMappingURL=dashboard.component.js.map
+//# sourceMappingURL=timeline.component.js.map
 
 /***/ }),
 
@@ -381,7 +381,7 @@ var LoginComponent = (function () {
             return true;
         }
         else {
-            this.router.navigate(['/dashboard']);
+            this.router.navigate(['/timeline']);
         }
     };
     LoginComponent.prototype.onLoginSubmit = function () {
@@ -394,7 +394,7 @@ var LoginComponent = (function () {
             if (data.success) {
                 _this.authService.storeUserData(data);
                 _this.FlashMsg.show('Logged In!', { cssClass: 'msg-accept msg', timeout: 2000 });
-                _this.router.navigate(['/dashboard']);
+                _this.router.navigate(['/timeline']);
             }
             else {
                 _this.FlashMsg.show(data.msg, { cssClass: 'msg-danger msg', timeout: 2000 });
@@ -439,7 +439,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/navbar/navbar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "    <nav class=\"My-navbar\">\n      <a class=\"logo-route\" [routerLink] = \"['/']\"> MEAN Social Auth-APP</a>\n      <div class=\"nav-container\">\n        <ul class=\"nav-routes nav-routes-left\">\n          <li class=\"route-item\" [routerLinkActive]=\"['active']\"  [routerLinkActiveOptions] = \"{exact:true}\">\n            <a class=\"route\"  [routerLink]=\"['/']\"> Home </a>\n          </li>\n        </ul>\n        <ul class=\"nav-routes nav-routes-right\">\n          <article>\n            <li *ngIf=\"!authService.loggedIn()\" class=\"route-item\"  [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\">\n              <a class=\"route\" [routerLink]=\"['/login']\"> Login </a>\n            </li>\n            <li *ngIf=\"!authService.loggedIn()\" class=\"route-item\"  [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\">\n              <a class=\"route\" [routerLink]=\"['/register']\"> Register </a>\n            </li>\n            <li *ngIf=\"authService.loggedIn()\" class=\"route-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\">\n              <a class=\"route\" [routerLink]=\"['/dashboard']\"> Dashboard </a>\n            </li>\n            <li *ngIf=\"authService.loggedIn()\" class=\"route-item\"  [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\">\n              <a class=\"route\" [routerLink]=\"['/profile']\"> Profile </a>\n            </li>\n            <li *ngIf=\"authService.loggedIn()\" class=\"route-item\">\n              <a class=\"route\" href=\"#\" (click)=\"onLogout()\"> Logout </a>\n            </li>\n          </article>\n        </ul>\n      </div>\n      <button class=\"nav-toggler\" (click)=\"navDrop()\"><i class=\"material-icons\">arrow_drop_down_circle</i></button>\n\n    </nav>\n"
+module.exports = "    <nav class=\"My-navbar\">\n      <a class=\"logo-route\" [routerLink] = \"['/']\"> MEAN Social Auth-APP</a>\n      <div class=\"nav-container\">\n        <ul class=\"nav-routes nav-routes-left\">\n          <li class=\"route-item\" [routerLinkActive]=\"['active']\"  [routerLinkActiveOptions] = \"{exact:true}\">\n            <a class=\"route\"  [routerLink]=\"['/']\"> Home </a>\n          </li>\n        </ul>\n        <ul class=\"nav-routes nav-routes-right\">\n          <article>\n            <li *ngIf=\"!authService.loggedIn()\" class=\"route-item\"  [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\">\n              <a class=\"route\" [routerLink]=\"['/login']\"> Login </a>\n            </li>\n            <li *ngIf=\"!authService.loggedIn()\" class=\"route-item\"  [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\">\n              <a class=\"route\" [routerLink]=\"['/register']\"> Register </a>\n            </li>\n            <li *ngIf=\"authService.loggedIn()\" class=\"route-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\">\n              <a class=\"route\" [routerLink]=\"['/timeline']\"> Timeline </a>\n            </li>\n            <li *ngIf=\"authService.loggedIn()\" class=\"route-item\"  [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\">\n              <a class=\"route\" [routerLink]=\"['/profile']\"> Profile </a>\n            </li>\n            <li *ngIf=\"authService.loggedIn()\" class=\"route-item\">\n              <a class=\"route\" href=\"#\" (click)=\"onLogout()\"> Logout </a>\n            </li>\n          </article>\n        </ul>\n      </div>\n      <button class=\"nav-toggler\" (click)=\"navDrop()\"><i class=\"material-icons\">arrow_drop_down_circle</i></button>\n\n    </nav>\n"
 
 /***/ }),
 
@@ -521,7 +521,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "* {\r\n    margin: 0 !important;\r\n    padding: 0 !important;\r\n}\r\n\r\n* {\r\n    padding: 0 !important;\r\n    margin: 0 !important;\r\n    font-family: 'Roboto';\r\n    font-size: 32px;\r\n}\r\n\r\n.dashboard {\r\n    width: 85%;\r\n    height: auto;\r\n    padding: 15mm 5mm 5mm 5mm !important;\r\n    margin: 2mm auto 20mm auto !important;\r\n    position: relative;\r\n}\r\n\r\n.dashboard .page-title {\r\n    font-size: 40px;\r\n    text-align: center;\r\n    margin: 1mm 0mm !important;\r\n}\r\n\r\n.dashboard .dash-message {\r\n    font-size: 20px;\r\n    display: block;\r\n    margin: 5mm auto !important;\r\n    padding-left: 3mm !important;\r\n}\r\n\r\n.dashboard .dash-message i {\r\n    font-size: 20px;\r\n}\r\n\r\n.dashboard .list-group {\r\n    width: 100%;\r\n    list-style-type: none;\r\n    padding: 0mm 3mm !important;\r\n    margin-top: 10mm !important;\r\n}\r\n\r\n.Profile-Container {\r\n    width: 600px;\r\n    display: block;\r\n    margin: 2mm auto !important;\r\n}\r\n\r\n.Profile-Container .To-Post-Container {\r\n    width: 100%;\r\n    height: auto;\r\n    display: block;\r\n    padding: 2mm 0mm !important;\r\n}\r\n\r\n.Profile-Container .To-Post-Container form {\r\n    width: 100%;\r\n    height: auto;\r\n}\r\n\r\n.Profile-Container .To-Post-Container form textarea {\r\n    width: 95%;\r\n    height: 70px;\r\n    display: block;\r\n    margin: auto !important;\r\n    padding: 2px 6px 0px 6px !important;\r\n    line-height: 22px;\r\n    font-weight: 600;\r\n    font-size: 18px;\r\n    border: 0px 1px 1px 1px solid rgba(0, 0, 0, 0.1);\r\n    border-radius: 5px 5px 0px 0px;\r\n    resize: none;\r\n}\r\n\r\n.Profile-Container .To-Post-Container form textarea::-webkit-scrollbar {\r\n    background-color: transparent;\r\n    /*rgba(200, 200, 200, 0.2);*/\r\n    width: 10px;\r\n}\r\n\r\n.Profile-Container .To-Post-Container form textarea::-webkit-scrollbar-button {\r\n    /*background-color: rgba(220, 220, 220, 1);\r\n    color: rgba(255, 255, 255, 1);\r\n    height: 12px;\r\n    border-radius: 10px 10px 0px 0px;*/\r\n    display: none;\r\n}\r\n\r\n.Profile-Container .To-Post-Container form textarea::-webkit-scrollbar-thumb {\r\n    border-radius: 5px;\r\n    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);\r\n    background-color: rgba(250, 250, 250, 1);\r\n}\r\n\r\n.Profile-Container .To-Post-Container form textarea::-webkit-scrollbar-track {\r\n    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);\r\n    border-radius: 5px;\r\n}\r\n\r\n.Profile-Container .To-Post-Container form textarea:focus {\r\n    outline: none;\r\n}\r\n\r\n.Profile-Container .To-Post-Container form button {\r\n    /* position: relative; */\r\n    float: right;\r\n    margin-top: 7px !important;\r\n    margin-right: 7px !important;\r\n    width: 25px;\r\n    height: 25px;\r\n    font-weight: 600;\r\n    font-size: 20px;\r\n    background-color: rgba(0, 0, 0, 0.1);\r\n    color: rgba(255, 255, 255, 1);\r\n    border: none;\r\n    border-radius: 100px;\r\n    cursor: pointer;\r\n    transition: background-color 300ms, color 300ms;\r\n}\r\n\r\n\r\n/*.ToPost-Container button i {\r\n    color: rgba(255, 255, 255)\r\n}*/\r\n\r\n.Profile-Container .To-Post-Container form button:hover {\r\n    background-color: transparent;\r\n    color: rgba(0, 0, 0, 0.3);\r\n}\r\n\r\n.Profile-Container .To-Post-Container form button:focus {\r\n    outline: none;\r\n}\r\n\r\n.Profile-Container .To-Post-Container hr {\r\n    width: 99%;\r\n    margin: 10mm auto 5mm auto !important;\r\n    border: none;\r\n    border-bottom: 1px solid rgba(0, 0, 0, 0.1);\r\n}\r\n\r\n.dashboard .list-group .list-group-item {\r\n    width: 100%;\r\n    margin-bottom: 2mm !important;\r\n    border-bottom: 1px solid;\r\n    color: rgba(50, 50, 50, 0.9);\r\n    font-size: 20px;\r\n    border-color: rgba(50, 50, 50, 0.9);\r\n}\r\n\r\n@media screen and (max-width: 600px) {\r\n    .Profile-Container {\r\n        width: 100%;\r\n    }\r\n\r\n    .Profile-Container .To-Post-Container form textarea {\r\n        width: 93%;\r\n        line-height: 20px;\r\n        font-size: 16px;\r\n    }\r\n}\r\n\r\n@media screen and (max-width: 415px) {\r\n    .dashboard {\r\n        width: 100%;\r\n        padding: 2mm 0mm 4mm 0mm !important;\r\n        margin-bottom: 4mm !important;\r\n    }\r\n    .dashboard .list-group {\r\n        padding: 0 !important;\r\n        width: 95%;\r\n    }\r\n}\r\n\r\n@media screen and (max-width: 380px) {\r\n    .dashboard .page-title {\r\n        font-size: 36px;\r\n    }\r\n    .dashboard .list-group .list-group-item {\r\n        font-size: 17px;\r\n    }\r\n}\r\n\r\n@media screen and (max-width: 330px) {\r\n    .dashboard .page-title {\r\n        font-size: 32px;\r\n    }\r\n    .dashboard .list-group .list-group-item {\r\n        font-size: 15px;\r\n    }\r\n}", ""]);
+exports.push([module.i, "* {\r\n    margin: 0 !important;\r\n    padding: 0 !important;\r\n}\r\n\r\n* {\r\n    padding: 0 !important;\r\n    margin: 0 !important;\r\n    font-family: 'Roboto';\r\n    font-size: 32px;\r\n}\r\n\r\n.timeline {\r\n    width: 85%;\r\n    height: auto;\r\n    padding: 15mm 5mm 5mm 5mm !important;\r\n    margin: 2mm auto 20mm auto !important;\r\n    position: relative;\r\n}\r\n\r\n.timeline .page-title {\r\n    font-size: 40px;\r\n    text-align: center;\r\n    margin: 1mm 0mm !important;\r\n}\r\n\r\n.timeline .dash-message {\r\n    font-size: 20px;\r\n    display: block;\r\n    margin: 5mm auto !important;\r\n    padding-left: 3mm !important;\r\n}\r\n\r\n.timeline .dash-message i {\r\n    font-size: 20px;\r\n}\r\n\r\n.timeline .list-group {\r\n    width: 100%;\r\n    list-style-type: none;\r\n    padding: 0mm 3mm !important;\r\n    margin-top: 10mm !important;\r\n}\r\n\r\n.Profile-Container {\r\n    width: 600px;\r\n    display: block;\r\n    margin: 2mm auto !important;\r\n}\r\n\r\n.Profile-Container .To-Post-Container {\r\n    width: 100%;\r\n    height: auto;\r\n    display: block;\r\n    padding: 2mm 0mm !important;\r\n}\r\n\r\n.Profile-Container .To-Post-Container form {\r\n    width: 100%;\r\n    height: auto;\r\n}\r\n\r\n.Profile-Container .To-Post-Container form textarea {\r\n    width: 95%;\r\n    height: 70px;\r\n    display: block;\r\n    margin: auto !important;\r\n    padding: 2px 6px 0px 6px !important;\r\n    line-height: 22px;\r\n    font-weight: 600;\r\n    font-size: 18px;\r\n    border: 0px 1px 1px 1px solid rgba(0, 0, 0, 0.1);\r\n    border-radius: 5px 5px 0px 0px;\r\n    resize: none;\r\n}\r\n\r\n.Profile-Container .To-Post-Container form textarea::-webkit-scrollbar {\r\n    background-color: transparent;\r\n    /*rgba(200, 200, 200, 0.2);*/\r\n    width: 10px;\r\n}\r\n\r\n.Profile-Container .To-Post-Container form textarea::-webkit-scrollbar-button {\r\n    /*background-color: rgba(220, 220, 220, 1);\r\n    color: rgba(255, 255, 255, 1);\r\n    height: 12px;\r\n    border-radius: 10px 10px 0px 0px;*/\r\n    display: none;\r\n}\r\n\r\n.Profile-Container .To-Post-Container form textarea::-webkit-scrollbar-thumb {\r\n    border-radius: 5px;\r\n    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);\r\n    background-color: rgba(250, 250, 250, 1);\r\n}\r\n\r\n.Profile-Container .To-Post-Container form textarea::-webkit-scrollbar-track {\r\n    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);\r\n    border-radius: 5px;\r\n}\r\n\r\n.Profile-Container .To-Post-Container form textarea:focus {\r\n    outline: none;\r\n}\r\n\r\n.Profile-Container .To-Post-Container form button {\r\n    /* position: relative; */\r\n    float: right;\r\n    margin-top: 7px !important;\r\n    margin-right: 7px !important;\r\n    width: 25px;\r\n    height: 25px;\r\n    font-weight: 600;\r\n    font-size: 20px;\r\n    background-color: rgba(0, 0, 0, 0.1);\r\n    color: rgba(255, 255, 255, 1);\r\n    border: none;\r\n    border-radius: 100px;\r\n    cursor: pointer;\r\n    transition: background-color 300ms, color 300ms;\r\n}\r\n\r\n\r\n/*.ToPost-Container button i {\r\n    color: rgba(255, 255, 255)\r\n}*/\r\n\r\n.Profile-Container .To-Post-Container form button:hover {\r\n    background-color: transparent;\r\n    color: rgba(0, 0, 0, 0.3);\r\n}\r\n\r\n.Profile-Container .To-Post-Container form button:focus {\r\n    outline: none;\r\n}\r\n\r\n.Profile-Container .To-Post-Container hr {\r\n    width: 99%;\r\n    margin: 10mm auto 5mm auto !important;\r\n    border: none;\r\n    border-bottom: 1px solid rgba(0, 0, 0, 0.1);\r\n}\r\n\r\n.timeline .list-group .list-group-item {\r\n    width: 100%;\r\n    margin-bottom: 2mm !important;\r\n    border-bottom: 1px solid;\r\n    color: rgba(50, 50, 50, 0.9);\r\n    font-size: 20px;\r\n    border-color: rgba(50, 50, 50, 0.9);\r\n}\r\n\r\n@media screen and (max-width: 600px) {\r\n    .Profile-Container {\r\n        width: 100%;\r\n    }\r\n\r\n    .Profile-Container .To-Post-Container form textarea {\r\n        width: 93%;\r\n        line-height: 20px;\r\n        font-size: 16px;\r\n    }\r\n}\r\n\r\n@media screen and (max-width: 415px) {\r\n    .timeline {\r\n        width: 100%;\r\n        padding: 2mm 0mm 4mm 0mm !important;\r\n        margin-bottom: 4mm !important;\r\n    }\r\n    .timeline .list-group {\r\n        padding: 0 !important;\r\n        width: 95%;\r\n    }\r\n}\r\n\r\n@media screen and (max-width: 380px) {\r\n    .timeline .page-title {\r\n        font-size: 36px;\r\n    }\r\n    .timeline .list-group .list-group-item {\r\n        font-size: 17px;\r\n    }\r\n}\r\n\r\n@media screen and (max-width: 330px) {\r\n    .timeline .page-title {\r\n        font-size: 32px;\r\n    }\r\n    .timeline .list-group .list-group-item {\r\n        font-size: 15px;\r\n    }\r\n}", ""]);
 
 // exports
 
@@ -534,7 +534,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/profile/profile.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<head>\n  <link href=\"https://fonts.googleapis.com/icon?family=Material+Icons\" rel=\"stylesheet\">\n</head>\n<div *ngIf=\"user\">\n  <!--<div class=\"dashboard\">\n    <label class=\"page-title\">{{user.fname + \" \" + user.lname}}</label>\n    <ul class=\"list-group\">\n      <li class=\"list-group-item\">Username: {{user.username}}</li>\n      <li class=\"list-group-item\">Email   : {{user.email}}</li>\n    </ul>\n  </div>-->\n  <div class=\"Profile-Container\">\n    <div class=\"To-Post-Container\">\n      <form method = \"POST\" action=\"profile.php\" enctype=\"multipart/form-data\">\n          <textarea\n            rows=\"20\" name=\"post\"\n            placeholder=\"What's going on in your brain right now?\"\n          ></textarea>\n          <button name=\"makePost\" type=\"submit\" id=\"makePost\">\n            <i class=\"material-icons\">add</i>\n          </button>\n          <!--<label for=\"photo_posts\"><i class=\"material-icons\">add_a_photo</i></label>\n          <input type=\"file\" id=\"photo_posts\" accept=\".png,.jpg,\" />-->\n      </form>\n      <hr>\n    </div>\n    <div class=\"Post-Container\">\n\n    </div>\n  </div>\n</div>\n\n\n<!---->\n"
+module.exports = "<head>\n  <link href=\"https://fonts.googleapis.com/icon?family=Material+Icons\" rel=\"stylesheet\">\n</head>\n<div *ngIf=\"user\">\n  <!--<div class=\"timeline\">\n    <label class=\"page-title\">{{user.fname + \" \" + user.lname}}</label>\n    <ul class=\"list-group\">\n      <li class=\"list-group-item\">Username: {{user.username}}</li>\n      <li class=\"list-group-item\">Email   : {{user.email}}</li>\n    </ul>\n  </div>-->\n  <div class=\"Profile-Container\">\n    <div class=\"To-Post-Container\">\n      <form method = \"POST\" action=\"profile.php\" enctype=\"multipart/form-data\">\n          <textarea\n            rows=\"20\" name=\"post\"\n            placeholder=\"What's going on in your brain right now?\"\n          ></textarea>\n          <button name=\"makePost\" type=\"submit\" id=\"makePost\">\n            <i class=\"material-icons\">add</i>\n          </button>\n          <!--<label for=\"photo_posts\"><i class=\"material-icons\">add_a_photo</i></label>\n          <input type=\"file\" id=\"photo_posts\" accept=\".png,.jpg,\" />-->\n      </form>\n      <hr>\n    </div>\n    <div class=\"Post-Container\">\n\n    </div>\n  </div>\n</div>\n\n\n<!---->\n"
 
 /***/ }),
 
@@ -660,7 +660,7 @@ var RegisterComponent = (function () {
             return true;
         }
         else {
-            this.router.navigate(['/dashboard']);
+            this.router.navigate(['/timeline']);
         }
     };
     RegisterComponent.prototype.onRegisterSubmit = function () {

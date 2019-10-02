@@ -1,5 +1,5 @@
     <nav class="My-navbar">
-      <a class="logo-route" [routerLink] = "['/']"> MEAN Social Auth-APP</a>
+      <a class="logo-route" [routerLink] = "['/']"> Autolalia </a>
       <div class="nav-container">
         <ul class="nav-routes nav-routes-left">
           <li class="route-item" [routerLinkActive]="['active']"  [routerLinkActiveOptions] = "{exact:true}">
@@ -15,7 +15,7 @@
               <a class="route" [routerLink]="['/register']"> Register </a>
             </li>
             <li *ngIf="authService.loggedIn()" class="route-item" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
-              <a class="route" [routerLink]="['/dashboard']"> Dashboard </a>
+              <a class="route" [routerLink]="['/timeline']"> Timeline </a>
             </li>
             <li *ngIf="authService.loggedIn()" class="route-item"  [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}">
               <a class="route" [routerLink]="['/profile']"> Profile </a>

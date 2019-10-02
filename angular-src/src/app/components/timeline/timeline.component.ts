@@ -4,11 +4,11 @@ import { FlashMessagesService} from 'angular2-flash-messages';
 import { Router} from '@angular/router';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  selector: 'app-timeline',
+  templateUrl: './timeline.component.html',
+  styleUrls: ['./timeline.component.css']
 })
-export class DashboardComponent implements OnInit {
+export class TimelineComponent implements OnInit {
   user: Object;
 
   constructor(

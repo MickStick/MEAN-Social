@@ -1,6 +1,7 @@
+require('dotenv').config()
 module.exports = {
     //url: 'mongodb://localhost:27017/mean-tut',
-    url: 'mongodb://Mik:MeanApp01@ds117495.mlab.com:17495/mean-tut', //mongodb://<dbuser>:<dbpassword>@ds117495.mlab.com:17495/mean-tut
-    db: 'ds117495.mlab.com:17495/mean-tut',
-    secret: 'garbageString'
+    url: `mongodb://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_SERVER}/${process.env.DB_NAME}`, 
+    db: `${process.env.DB_SERVER}/${process.env.DB_NAME}`,
+    secret: process.env.SECRET
 };

@@ -5,7 +5,7 @@
     font-size: 32px;
 }
 
-.dashboard {
+.timeline {
     width: 85%;
     height: auto;
     padding: 15mm 5mm !important;
@@ -13,55 +13,55 @@
     position: relative;
 }
 
-.dashboard .page-title {
+.timeline .page-title {
     font-size: 40px;
     text-align: center;
     margin: 1mm 0mm !important;
 }
 
-.dashboard .dash-message {
+.timeline .dash-message {
     font-size: 20px;
     display: block;
     margin: 5mm auto !important;
     padding-left: 3mm !important;
 }
 
-.dashboard .dash-message i {
+.timeline .dash-message i {
     font-size: 20px;
 }
 
 @media screen and (max-width: 415px) {
-    .dashboard {
+    .timeline {
         width: 100%;
         padding: 2mm 0mm 4mm 0mm !important;
         margin-bottom: 4mm !important;
     }
-    .dashboard .dash-meassage {
+    .timeline .dash-meassage {
         margin-top: 4mm !important;
         width: 80%;
     }
 }
 
 @media screen and (max-width: 380px) {
-    .dashboard .page-title {
+    .timeline .page-title {
         font-size: 36px;
     }
-    .dashboard .dash-meassage {
+    .timeline .dash-meassage {
         font-size: 17px;
     }
-    .dashboard .dash-message i {
+    .timeline .dash-message i {
         font-size: 17px;
     }
 }
 
 @media screen and (max-width: 330px) {
-    .dashboard .page-title {
+    .timeline .page-title {
         font-size: 32px;
     }
-    .dashboard .dash-meassage {
+    .timeline .dash-meassage {
         font-size: 15px;
     }
-    .dashboard .dash-message i {
+    .timeline .dash-message i {
         font-size: 15px;
     }
 }

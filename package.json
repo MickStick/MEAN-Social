@@ -1,5 +1,5 @@
 {
-  "name": "mean-social",
+  "name": "autolalia-backend",
   "version": "1.0.0",
   "description": "A tutorial application for learning mean stack app dev",
   "main": "server.js",

@@ -6,7 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { TimelineComponent } from './components/timeline/timeline.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
@@ -38,8 +38,8 @@ const appRoutes: Routes = [
     component: ProfileComponent, canActivate: [AuthGuardService]
   },
   {
-    path: 'dashboard',
-    component: DashboardComponent, canActivate: [AuthGuardService]
+    path: 'timeline',
+    component: TimelineComponent, canActivate: [AuthGuardService]
   }
 ];
 
@@ -47,7 +47,7 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     NavbarComponent,
-    DashboardComponent,
+    TimelineComponent,
     ProfileComponent,
     LoginComponent,
     RegisterComponent,

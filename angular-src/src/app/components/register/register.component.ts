@@ -29,7 +29,7 @@ export class RegisterComponent implements OnInit {
     if (!this.authService.loggedIn()) {
       return true;
     }else {
-      this.router.navigate(['/dashboard']);
+      this.router.navigate(['/timeline']);
     }
   }
 
